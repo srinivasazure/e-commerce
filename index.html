@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flagship Mobile Pulse Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- STICKY HEADER & NAVIGATION -->
+    <header>
+        <div class="logo">Mobile<span>Pulse</span></div>
+        <div class="nav-controls">
+            <button id="auth-nav-btn" class="auth-btn">Log In</button>
+            <div class="cart-icon-container" id="cart-toggle">
+                🛒 Cart <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- AUTH MODAL POPUP -->
+    <div id="auth-modal" class="modal-overlay">
+        <div class="modal-box">
+            <h2 id="modal-title">Sign In</h2>
+            <p class="modal-subtitle">Access checkout security by authentication</p>
+            <form id="auth-form">
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" id="auth-email" placeholder="you@example.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="auth-password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="submit-auth-btn">Authenticate Account</button>
+            </form>
+            <button id="close-modal-btn" class="close-text-btn">Cancel</button>
+        </div>
+    </div>
+
+    <!-- MAIN BODY CORE LAYOUT -->
+    <div class="container">
+        <!-- Products Grid Showcase Section -->
+        <main class="products-grid" id="products-container">
+            <!-- Dynamic Cards Injected via JS -->
+        </main>
+
+        <!-- Sidebar Shopping Cart Section -->
+        <aside class="cart-sidebar" id="cart-drawer">
+            <h2>Your Order Basket</h2>
+            <ul class="cart-items-list" id="cart-items">
+                <!-- Shopping items injected here -->
+            </ul>
+            <div class="cart-total-section">
+                <span>Total Amount:</span>
+                <span id="cart-total">₹0</span>
+            </div>
+            <button class="checkout-btn" id="checkout">Proceed to Buy</button>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
